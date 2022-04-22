@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: open-tour-dev
+
+resources:
+- ns.yaml
+- rolebinding.yaml
+- postgresql.yaml
+
+# postgresql: switch to Deployment before use
+#secretGenerator:
+#- name: wanjaserver
+#  literals:
+#  - database-name=wanjadb
+#  - database-password=wanja
+#  - database-user=wanja
