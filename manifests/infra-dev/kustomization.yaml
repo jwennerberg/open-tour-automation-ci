@@ -6,6 +6,7 @@ resources:
 - ns.yaml
 - rolebinding.yaml
 - postgresql.yaml
+- repository.yaml
 
 # postgresql: switch to Deployment before use
 #secretGenerator:
