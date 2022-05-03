@@ -2,14 +2,20 @@
 
 ### Overview
 
-This repository contains a simple demo of OpenShift Pipelines (Tekton), including the new Pipelines-as-code feature.
+This repository contains a simple demo of **OpenShift Pipelines** (Tekton), including the new **Pipelines-as-code** feature.
 
 Demo consists of two parts:
-1) Create and run Tekton pipeline in the cluster
+#### 1. Create and run Tekton pipeline in the cluster
   - Extend cluster with Tekton API's
-  - Add Tekton Pipelines and Tasks to the cluster from manifests stored in Git
-  - Run Pipeline to test, build and deploy a **Quarkus** to a Development environment
-2) Use `pipelines-as-code` to run pipeline in cluster without creating any CI infrastructure. Everything stored in Git. 
+  - Add Tekton `Pipelines` and `Tasks` to the cluster from manifests stored in Git ([./manifests/pipelines/](manifests/pipelines/))
+  - Run simple Pipeline to test and build a Quarkus application and deploy it to a development environment in OpenShift
+
+![pipeline-simple](images/pipeline-simple.png)
+
+#### 2. Use `pipelines-as-code` to run pipelines in cluster
+  - CI infrastructure dynamically created in cluster. Everything stored in Git. 
+  - Integrated as a GitHub App, triggers on Pull Request events.
+  - [.tekton/pull-request.yaml](./.tekton/pull-request.yaml)
 
 ### Run demo
 
@@ -35,6 +41,8 @@ The install script will do the following:
 - Create application `Pipeline` and custom `Tasks` to `open-tour-ci` namespace
 
 ### Start Pipeline
+
+Start additional `PipelineRuns` with the demo script.
 
 ```bash
 ./demo.sh start
