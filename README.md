@@ -4,6 +4,8 @@
 
 This repository contains a simple demo of **OpenShift Pipelines** (Tekton), including the new **Pipelines-as-code** feature.
 
+The demo is based on parts from the excellent E-book **Getting GitOps** by Wanja Pernaut. Grab a free copy yourself from the [https://developers.redhat.com/e-books/getting-gitops-practical-platform-openshift-argo-cd-and-tekton](Red Hat Developers community).
+
 Demo consists of two parts:
 #### 1. Create and run Tekton pipeline in the cluster
   - Extend cluster with Tekton API's
